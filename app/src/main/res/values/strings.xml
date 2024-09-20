@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Convertisseur d\'unités</string>
+    <string name="currency_prompt">Choose a currency</string>
+
+</resources>
