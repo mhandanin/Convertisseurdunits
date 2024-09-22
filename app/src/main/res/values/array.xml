@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string-array name="monnaie">
         <item>Choose a currency</item>
-        <item>MAD</item>
+        <item android:icon="@drawable/moroccan_flag">MAD</item>
         <item>Euro</item>
         <item>US Dollar</item>
         <item>Rouble</item>

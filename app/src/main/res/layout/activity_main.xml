@@ -12,10 +12,10 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Convertisseur d'unités"
         android:textSize="30sp"
-        android:padding="10dp"
-        android:gravity="center"
 
         />
 
@@ -24,35 +24,44 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/title"
-        android:hint="Enter your amount"
-        android:padding="10dp"
         android:layout_marginTop="20dp"
+        android:hint="Enter your amount"
         android:inputType="numberDecimal"
-        />
+        android:padding="10dp" />
 
     <TextView
         android:id="@+id/from"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_below="@id/currencyInput"
         android:layout_marginTop="40dp"
         android:text="From: "
-        android:layout_below="@id/currencyInput"
         android:textSize="30sp" />
 
     <Spinner
         android:id="@+id/monnaie_from"
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="50dp"
+        android:layout_below="@id/currencyInput"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:layout_toEndOf="@id/from"
         android:entries="@array/monnaie"
-        android:prompt="@string/currency_prompt"
         android:textSize="30sp"
-        android:layout_below="@id/currencyInput"
 
 
         />
+
+    <ImageView
+        android:id="@+id/from_flag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/currencyInput"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@id/monnaie_from"
+        android:scaleType="centerCrop"
+         />
+
 
     <TextView
         android:id="@+id/to"
@@ -61,19 +70,29 @@
         android:layout_below="@id/from"
         android:layout_marginTop="40dp"
         android:text="To: "
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        />
 
     <Spinner
         android:id="@+id/monnaie_to"
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="50dp"
         android:layout_below="@id/monnaie_from"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:layout_toEndOf="@id/from"
         android:entries="@array/monnaie"
-        android:prompt="@string/currency_prompt"
         android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/to_flag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/from_flag"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@id/monnaie_to"
+        android:scaleType="centerCrop"
+         />
 
     <TextView
         android:id="@+id/result"
@@ -87,12 +106,11 @@
 
     <Button
         android:id="@+id/convertBTN"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/result"
         android:layout_marginTop="20dp"
-        android:text="Convert"
-        />
+        android:text="Convert" />
 
 
 </RelativeLayout>
